@@ -1,0 +1,249 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; /* Use a modern font */
+}
+
+/* Define a custom color scheme */
+:root {
+  --primary-color: #0073e6; /* Bright blue */
+  --secondary-color: #333; /* Dark gray for text */
+  --accent-color: #ff6f61; /* Coral for call-to-action */
+  --background-color: #f4f4f4; /* Light gray for background */
+  --header-bg-color: #fff; /* White for header */
+  --text-color: #555; /* Mid-gray for body text */
+}
+
+/* Styling the body */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling the header */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--header-bg-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+#header:hover {
+  background-color: var(--primary-color);
+  color: #fff; /* Invert colors on hover */
+}
+
+#header-img {
+  width: 120px;
+  transition: transform 0.3s ease; /* Smooth logo animation */
+}
+
+#header-img:hover {
+  transform: scale(1.1); /* Enlarge logo on hover */
+}
+
+#nav-bar {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* Adjust page content padding to account for fixed header */
+main {
+  padding-top: 100px;
+}
+
+/* Hero section styling */
+#hero {
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color)), url('hero-image.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px); /* Raise button on hover */
+}
+
+/* Features section */
+#features {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card-like appearance */
+  margin: 30px 15px;
+}
+
+.feature {
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0; /* Subtle border */
+  border-radius: 10px;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Highlight on hover */
+}
+
+/* Video section */
+#video-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+#video {
+  width: 80%;
+  max-width: 800px;
+  height: 450px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Elevated video frame */
+}
+
+/* Pricing section */
+#pricing {
+  padding: 50px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.pricing-plan {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  color: var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-plan:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact section */
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="email"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus {
+  border-color: var(--primary-color);
+}
+
+input[type="submit"] {
+  padding: 12px 30px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Footer section */
+footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Media query */
+@media (max-width: 768px) {
+  #nav-bar {
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--header-bg-color);
+    border-top: 1px solid #e0e0e0;
+    padding: 10px 0;
+  }
+  
+  #hero {
+    padding: 70px 20px;
+  }
+
+  form {
+    width: 90%;
+  }
+}
